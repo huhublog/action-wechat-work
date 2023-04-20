@@ -1,12 +1,14 @@
 name: Send notification on push
-on: [push]
+on:
+  schedule:
+    - cron: "0 1,4,10,11 * * *"
 
 jobs:
   send-msg:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest]
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
