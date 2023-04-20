@@ -17,5 +17,5 @@ jobs:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: text
-          content: "填写TS了，每天9点，12点，18点提醒！"
+          content: "填写TS了，每天9点，12点，18点，19点提醒！"
           mentioned_list: '["@all"]'
